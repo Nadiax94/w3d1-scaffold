@@ -1,26 +1,44 @@
-# w3d1-scaffold
-Completed GPU profiling experiment using Qwen2.5-1.5B-Instruct.
+# Lab W3D1 - Profile Inference on a Real GPU
 
-## Tasks Completed
+## Overview
+This lab profiles inference performance of Qwen2.5-1.5B-Instruct on a real GPU.
+
+The experiment compares:
+- FP16 inference
+- INT8 quantized inference
+
+with different context lengths.
+
+## Experiments Performed
+
 - Loaded Qwen2.5-1.5B-Instruct using Transformers.
-- Tested inference performance with:
-  - FP16
-  - INT8 quantization
 - Measured:
-  - GPU VRAM usage
+  - VRAM usage
   - GPU utilization
-  - Tokens per second
-- Profiled different context lengths:
-  - 512
-  - 2048
-  - 4096
-- Compared batch size performance (batch 1 vs batch 8).
-- Generated:
-  - `profile.json`
-  - `batch_check.json`
+  - Generation speed (tokens/s)
 
-## Key Observations
-- VRAM usage increases as context length increases.
-- FP16 consumes more VRAM than INT8.
+- Tested context lengths:
+  - 512 tokens
+  - 2048 tokens
+  - 4096 tokens
+
+- Compared batch performance:
+  - Batch size 1
+  - Batch size 8
+
+## Results
+
+Observations:
+- VRAM usage increases with larger context lengths.
+- FP16 uses more GPU memory than INT8.
 - GPU utilization does not always represent actual throughput.
-- Increasing batch size improves inference throughput.
+- Larger batches improve inference throughput.
+
+## Files
+
+- `profile.json` : GPU profiling results for different dtypes and contexts.
+- `batch_check.json` : Batch 1 vs Batch 8 throughput comparison.
+
+## Model
+
+Qwen2.5-1.5B-Instruct
