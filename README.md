@@ -23,4 +23,14 @@ This lab studies different aspects of LLM inference, including performance measu
 
 ---
 
+### Lab W3D3 - The Engine Swap
+
+This lab replaces the inference engine with **vLLM** while keeping the same OpenAI-compatible `/v1` API.
+
+It compares static batching with continuous batching at concurrency levels `1, 4, 8` and measures throughput scaling on a Google Colab T4 GPU.
+
+The lab includes the benchmark results in `ab_report.json` and finishes with a `GREEN CHECK: PASS`.
+
+
+
 ## Repository Structure
