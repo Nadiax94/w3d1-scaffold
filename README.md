@@ -27,9 +27,18 @@ This lab studies different aspects of LLM inference, including performance measu
 
 This lab replaces the inference engine with **vLLM** while keeping the same OpenAI-compatible `/v1` API.
 
-It compares static batching with continuous batching at concurrency levels `1, 4, 8` and measures throughput scaling on a Google Colab T4 GPU.
+It compares static batching with continuous batching at concurrency levels `1, 4, 8` and measures throughput scaling on a Google Colab T4 GPU. 
 
 The lab includes the benchmark results in `ab_report.json` and finishes with a `GREEN CHECK: PASS`.
+
+
+---
+
+### Lab W3D4 - Quantise and Lock the Model
+
+This lab compares AWQ and fp16 serving with vLLM and validates function calling.
+
+The AWQ model was locked after achieving a `10/10` smoke score and `GREEN CHECK: PASS`.
 
 
 
